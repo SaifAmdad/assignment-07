@@ -1,9 +1,14 @@
+import { Outlet } from "react-router";
 import "./App.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-      <h2 className="bg-red-500 text-2xl">Assignment 07</h2>
+      <Navbar />
+      <Outlet />
+      <Footer />
     </>
   );
 }
