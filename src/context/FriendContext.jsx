@@ -4,6 +4,7 @@ export const StoreContext = createContext();
 
 export const ContextProvider = ({ children }) => {
   const [friends, setFriends] = useState([]);
+  const [timeline, setTimeline] = useState([]);
   useEffect(() => {
     const getFriends = async () => {
       const res = await fetch("/data.json");
@@ -17,6 +18,8 @@ export const ContextProvider = ({ children }) => {
     return {
       friends,
       setFriends,
+      timeline,
+      setTimeline,
     };
   });
 
