@@ -88,7 +88,7 @@ function Navbar() {
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">
-            <img src={logo} alt="" srcset="" />
+            <img src={logo} alt="" srcSet="" />
           </a>
         </div>
         <div className="navbar-end hidden lg:flex">

@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import HomeCard from "../ui/HomeCard";
+import { StoreContext } from "../context/FriendContext";
+import { Link } from "react-router";
 
 function Home() {
+  const { friends } = useContext(StoreContext);
+
   return (
     <div className="container mx-auto lg:w-[80%] ">
       <section className="mt-20 mb-10 text-center">
@@ -44,10 +48,11 @@ function Home() {
       <section className="mb-20">
         <h3 className="font-semibold text-2xl text-black ">Your Friends</h3>
         <div className="py-2 grid place-items-center sm:place-items-stretch gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <HomeCard />
-          <HomeCard />
-          <HomeCard />
-          <HomeCard />
+          {friends.map((friend, i) => (
+            <Link key={i} to={`/details/${friend.id}`}>
+              <HomeCard friend={friend} />
+            </Link>
+          ))}
         </div>
       </section>
     </div>
