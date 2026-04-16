@@ -1,4 +1,5 @@
 import React from "react";
+import HomeCard from "../ui/HomeCard";
 
 function Home() {
   return (
@@ -16,27 +17,37 @@ function Home() {
         </button>
       </section>
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 place-items-center gap-3 justify-items-center">
-        <div className="bg-white shadow h-34.25 w-65 text-center flex items-center justify-center flex-col rounded-lg">
+        <div className="bg-white shadow shadow-gray-350 h-34.25 w-65 text-center flex items-center justify-center flex-col rounded-lg">
           <h2 className="font-semibold text-[32px] text-[#244d3f] ">10</h2>
           <p className="font-normal text-[#64748b] text-[18px] ">
             Total Friends
           </p>
         </div>
-        <div className="bg-white shadow h-34.25 w-65 text-center flex items-center justify-center flex-col rounded-lg">
+        <div className="bg-white shadow shadow-gray-350 h-34.25 w-65 text-center flex items-center justify-center flex-col rounded-lg">
           <h2 className="font-semibold text-[32px] text-[#244d3f] ">3</h2>
           <p className="font-normal text-[#64748b] text-[18px] ">On Track</p>
         </div>
-        <div className="bg-white shadow h-34.25 w-65 text-center flex items-center justify-center flex-col rounded-lg">
+        <div className="bg-white shadow shadow-gray-350 h-34.25 w-65 text-center flex items-center justify-center flex-col rounded-lg">
           <h2 className="font-semibold text-[32px] text-[#244d3f] ">6</h2>
           <p className="font-normal text-[#64748b] text-[18px] ">
             Need Attention
           </p>
         </div>
-        <div className="bg-white shadow h-34.25 w-65 text-center flex items-center justify-center flex-col rounded-lg">
+        <div className="bg-white shadow shadow-gray-350 h-34.25 w-65 text-center flex items-center justify-center flex-col rounded-lg">
           <h2 className="font-semibold text-[32px] text-[#244d3f] ">12</h2>
           <p className="font-normal text-[#64748b] text-[18px] ">
             Interactions This Month
           </p>
+        </div>
+      </section>
+      <hr className="bg-[#E9E9E9] border-[0.3px] border-[#E9E9E9] my-10" />
+      <section className="mb-20">
+        <h3 className="font-semibold text-2xl text-black ">Your Friends</h3>
+        <div className="py-2 grid place-items-center sm:place-items-stretch gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <HomeCard />
+          <HomeCard />
+          <HomeCard />
+          <HomeCard />
         </div>
       </section>
     </div>
