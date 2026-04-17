@@ -18,6 +18,7 @@ function TimelineCard({ details }) {
     "November",
     "December",
   ];
+  const month = details.time.split("/")[0] - 1;
 
   return (
     <div className="my-5 flex items-center justify-start gap-3 shadow shadow-gray-300 bg-white py-5 px-4 border border-gray-200 rounded-sm">
@@ -41,8 +42,7 @@ function TimelineCard({ details }) {
         </div>
         <p className="text-[16px] font-medium text-[#64748b] ">
           {" "}
-          {months[details.time.split("/")[0] - 1]}{" "}
-          {details.time.split("/").slice(1, 3).join(", ")}
+          {months[month]} {details.time.split("/").slice(1, 3).join(", ")}
         </p>
       </div>
     </div>
