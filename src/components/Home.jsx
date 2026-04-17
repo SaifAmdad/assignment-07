@@ -45,6 +45,11 @@ function Home() {
         </div>
       </section>
       <hr className="bg-[#E9E9E9] border-[0.3px] border-[#E9E9E9] my-10" />
+      {!friends.length && (
+        <div className="h-[70vh] flex justify-center items-start">
+          <span className="loading loading-bars loading-lg text-[#244d3f]"></span>
+        </div>
+      )}
       <section className="mb-20">
         <h3 className="font-semibold text-2xl text-black ">Your Friends</h3>
         <div className="py-2 grid place-items-center sm:place-items-stretch gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
